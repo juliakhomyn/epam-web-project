@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="static/styles/style.css">
+<!--    <link th:rel="stylesheet" th:href="@{/assets/tempusdominus-bootstrap-4/tempusdominus-bootstrap-4.min.css}"/>-->
+<!--    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>-->
+
+    <link rel="icon" type="image/png" href="static/icons/logo.png">
+
+    <title>Bakery</title>
+</head>
+<body>
+<nav class="navbar">
+    <div class="logo">
+        <a href="#home">
+            <img src="static/icons/logo.png" alt="bakery">
+        </a>
+        <h1>Bakery</h1>
+    </div>
+    <ul class="navlinks">
+        <li><a href="menu.html"><span>Menu</span></a></li>
+        <li><a href="#gallery" class="active"><span>Gallery</span></a></li>
+        <li><a href="#contact"><span>Contact Us</span></a></li>
+    </ul>
+</nav>
+
+<div class="content index-content">
+    <div id="home" class="home menu_anchors">
+        <div>
+            <a>Your favourite bakery</a>
+            <p class="home-message">Feel the smell of freshly baked pastries <br> and enjoy the pleasant taste</p>
+            <q>The fine arts are five in number, namely: painting, sculpture, poetry, music and architecture, the principal branch of the latter being pastry.</q>
+            <p class="home-quote">Marie-Antoine Careme</p>
+            <img src="static/icons/logo.png">
+        </div>
+    </div>
+
+    <div id="gallery" class="gallery menu_anchors">
+        <div class="section-header">
+            <h2>Discover</h2>
+            <p>our unique atmosphere</p>
+        </div>
+        <div class="gallery-row">
+            <div class="gallery-col">
+                <img src="static/images/gallery/gallery1.jpg" onclick="myFunction(this)">
+            </div>
+            <div class="gallery-col">
+                <img src="static/images/gallery/gallery2.jpg" onclick="myFunction(this)">
+            </div>
+            <div class="gallery-col">
+                <img src="static/images/gallery/gallery3.jpg" onclick="myFunction(this)">
+            </div>
+            <div class="gallery-col">
+                <img src="static/images/gallery/gallery4.jpg" onclick="myFunction(this)">
+            </div>
+        </div>
+        <div class="gallery-container">
+            <span onclick="this.parentElement.style.display='none'" class="close-btn">&times;</span>
+            <img id="expandedImg" style="width:100%">
+        </div>
+    </div>
+
+    <div id="contact" class="contact menu_anchors">
+        <div class="section-header">
+            <h2>Get</h2>
+            <p>in touch</p>
+        </div>
+        <div class="row">
+            <div class="column hide_on_width">
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2622.064714454249!2d24.696844215641637!3d48.91415927929295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4730c13f296f9eb5%3A0x7aba2a58c293a8c!2z0LLRg9C70LjRhtGPINCo0LXQstGH0LXQvdC60LAsIDczLCDQhtCy0LDQvdC-LdCk0YDQsNC90LrRltCy0YHRjNC6LCDQhtCy0LDQvdC-LdCk0YDQsNC90LrRltCy0YHRjNC60LAg0L7QsdC70LDRgdGC0YwsIDc2MDAw!5e0!3m2!1suk!2sua!4v1637689186154!5m2!1suk!2sua"
+                            width="600"
+                            height="500"
+                            style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+            <div class="column">
+                <div class="menu_grid menu_grid_contact">
+                    <div class="contact-header">
+                        <h2>Opening hours</h2>
+                    </div>
+                    <div class="contact_item">
+                        <div class="row">
+                            <div class="column">
+                                <p>Bakery</p>
+                                <p class="open-days">Daily</p>
+                            </div>
+                            <div class="column">
+                                <p class="price">7am - 4pm</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact_item">
+                        <div class="row">
+                            <div class="column">
+                                <p>Lunch Service</p>
+                                <p class="open-days">Monday - Friday</p>
+                            </div>
+                            <div class="column">
+                                <p class="price">12am - 2pm</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact_item">
+                        <div class="row">
+                            <div class="column">
+                                <p>Reservation</p>
+                                <p class="open-days">Daily</p>
+                            </div>
+                            <div class="column">
+                                <p class="price">7am - 8pm</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-header">
+                        <h2>Hope to see you soon!</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer-basic">
+    <footer>
+        <div class="social">
+            <a href="#"><img src="static/icons/instagram.png"></a>
+            <a href="#"><img src="static/icons/pinterest.png"></a>
+            <a href="#"><img src="static/icons/twitter.png"></a>
+            <a href="#"><img src="static/icons/facebook.png"></a>
+        </div>
+        <ul class="list-inline">
+            <li class="list-inline-item">
+                <a href="#">
+                    <img src="static/icons/logo.png" alt="bakery">
+                </a></li>
+            <li class="list-inline-item"><a href="#">Bakery</a></li>
+        </ul>
+        <p class="copyright">Bakery © 2025</p>
+    </footer>
+</div>
+
+<script src="static/scripts/script.js"></script>
+
+</body>
+</html>
